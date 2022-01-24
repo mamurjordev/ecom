@@ -30,7 +30,7 @@
 					<tr>
 						<th scope="row">1</th>
 						<td><?php echo $row['category_name'] ?></td>
-						<td><img src="<?php echo $row['category_image'] ?>" height="75px" alt=""></td>
+						<td><img src="func/<?php echo $row['category_image'] ?>" height="75px" alt=""></td>
 						
 						<td>
 							<a href="edit.php?id=<?php echo $row['category_id'] ?>">Edit</a> | <a href="func/delete.php?id=<?php echo $row['category_id'] ?>">Delete</a>
