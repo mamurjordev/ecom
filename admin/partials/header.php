@@ -17,6 +17,12 @@
     <link rel="stylesheet" href="./../assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="./../assets/css/app.css">
     <link rel="shortcut icon" href="./../assets/images/favicon.svg" type="image/x-icon">
+
+    <!-- rich-text-area ckeditor cdn -->
+    <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+
+    <!-- image-uploader -->
+    <link type="text/css" rel="stylesheet" href="./../assets/image-uploader/dist/image-uploader.min.css">
 </head>
 
 <body>

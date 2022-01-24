@@ -27,6 +27,12 @@
                                 <span>Categories</span>
                             </a>
                         </li>
+                        <li class="sidebar-item">
+                            <a href="../products" class='sidebar-link'>
+                                <i class="bi bi-diagram-3"></i>
+                                <span>Products</span>
+                            </a>
+                        </li>
                         
                         <li class="sidebar-item">
                             <a href="../users" class='sidebar-link'>
