@@ -28,6 +28,13 @@
                             </a>
                         </li>
                         
+                        <li class="sidebar-item">
+                            <a href="../users" class='sidebar-link'>
+                                <i class="bi bi-person"></i>
+                                <span>Users</span>
+                            </a>
+                        </li>
+                        
                         <li class="sidebar-item  has-sub">
                             <a href="#" class='sidebar-link'>
                                 <i class="bi bi-stack"></i>
