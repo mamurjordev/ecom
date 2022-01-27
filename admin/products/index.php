@@ -38,11 +38,11 @@
 						<th scope="col"><?php echo $row['price'] ?></th>
 						<th scope="col"><?php echo $row['quantity'] ?></th>
 						<th scope="col">
-                            <a href="edit.php?id=<?php echo $row['user_id'] ?>">
+                            <a href="edit.php?id=<?php echo $row['product_id'] ?>">
                                 <button class="btn btn-primary"><i class="bi bi-pencil-square"></i></button>
                             </a>    
 
-                            <a href="func/delete.php?id=<?php echo $row['user_id'] ?>">
+                            <a href="func/delete.php?id=<?php echo $row['product_id'] ?>">
                                 <button class="btn btn-danger"><i class="bi bi-archive-fill"></i></button>
                             </a>
                         </th>
