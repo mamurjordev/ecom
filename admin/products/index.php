@@ -27,13 +27,14 @@
 					</tr>
 				</thead>
 				<tbody>
+					<?php $i=1 ?>
                     <?php foreach($data as $row): ?>
                     <tr>
+						<th scope="col"><?php echo $i++ ?></th>
 						<th scope="col"><?php echo $row['product_name'] ?></th>
 						<th scope="col">
-                            <!-- <img src="<?php echo $row['feature_image'] ?>" alt=""> -->
+                            <img src="<?php echo 'func/'.$row['feature_image'] ?>" height="80px" alt="">
                         </th>
-						<th scope="col"><?php echo $row['email'] ?></th>
 						<th scope="col"><?php echo $row['price'] ?></th>
 						<th scope="col"><?php echo $row['quantity'] ?></th>
 						<th scope="col">

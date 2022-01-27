@@ -27,12 +27,13 @@ require_once __DIR__.'/../../../config.php';
             move_uploaded_file($temp_location[$i],$gallery_image[$i]);
         }
 
-
+        $gallery_image = json_encode($gallery_image);
+        
         // temp-userid variable until make auth
         $user_id = rand(1,3);
 
         $sql = "INSERT INTO products (category_id, user_id, product_name, feature_image, gallery, description, quantity, price, discount_price)
-        VALUES ('$product_name', '$user_id', '$product_name', '$feature_image', '$gallery', '$description', 'quantity', 'price', 'discount_price')";
+        VALUES ('$product_name', '$user_id', '$product_name', '$image_name', '$gallery_image', '$description', 'quantity', 'price', 'discount_price')";
         $result = $connection->query($sql);
         
 
