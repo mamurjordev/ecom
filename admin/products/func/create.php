@@ -33,7 +33,7 @@ require_once __DIR__.'/../../../config.php';
         $user_id = rand(1,3);
 
         $sql = "INSERT INTO products (category_id, user_id, product_name, feature_image, gallery, description, quantity, price, discount_price)
-        VALUES ('$product_name', '$user_id', '$product_name', '$image_name', '$gallery_image', '$description', 'quantity', 'price', 'discount_price')";
+        VALUES ('$product_name', '$user_id', '$product_name', '$image_name', '$gallery_image', '$description', '$quantity', '$price', '$discount_price')";
         $result = $connection->query($sql);
         
 
