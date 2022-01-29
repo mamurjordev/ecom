@@ -102,10 +102,7 @@ if(isset($_GET['id'])){
 
 $('.product-gallery').imageUploader({
     preloaded: preloaded,
-    imagesInputName: 'photos',
-    preloadedInputName: 'old',
-    maxSize: 2 * 1024 * 1024,
-    maxFiles: 10
+    preloadedInputName: 'old'
 });
 </script>
 
