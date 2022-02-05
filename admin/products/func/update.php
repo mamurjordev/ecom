@@ -24,20 +24,20 @@ require_once __DIR__.'/../../../config.php';
 
 
 
-        // feature image
-        if(isset($_FILES['feature_image'])){
-            $image = $_FILES['feature_image'];
+        // // feature image
+        // if(isset($_FILES['feature_image'])){
+        //     $image = $_FILES['feature_image'];
 
-            // feature image
-            $temp_location =  $image['tmp_name'];
-            $image_name = 'img/'.time().'.webp';
-            move_uploaded_file($temp_location,$image_name);
+        //     // feature image
+        //     $temp_location =  $image['tmp_name'];
+        //     $image_name = 'img/'.time().'.webp';
+        //     move_uploaded_file($temp_location,$image_name);
 
-            // delete existing feature image
-            unlink($existing_feature_image);
-        }else{
-            $image_name = $existing_feature_image;
-        }
+        //     // delete existing feature image
+        //     unlink($existing_feature_image);
+        // }else{
+        //     $image_name = $existing_feature_image;
+        // }
 
         // gallery image processing
 
@@ -67,7 +67,7 @@ require_once __DIR__.'/../../../config.php';
                 $count_gallery = count($gallery['tmp_name']);
                 $gallery_image = [];
                 for ($i=0; $i < $count_gallery ; $i++) { 
-                    $temp_location[$i] =  $gallery['tmp_name'];
+                    $temp_location[$i] =  $gallery['tmp_name'][$i];
                     $gallery_image[$i] = 'img/'.time().'.webp';
                     move_uploaded_file($temp_location[$i],$gallery_image[$i]);
 

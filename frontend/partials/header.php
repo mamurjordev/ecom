@@ -30,7 +30,7 @@
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img src="frontend/assets/img/logo/logo.png" alt="">
+                    <img src="frontend/assets/img/mcart.png" alt="">
                 </div>
             </div>
         </div>
@@ -44,7 +44,7 @@
                     <div class="menu-wrapper">
                         <!-- Logo -->
                         <div class="logo">
-                            <a href="index.html"><img src="frontend/assets/img/logo/logo.png" alt=""></a>
+                            <a href="index.html"><img src="frontend/assets/img/mcart.png" alt=""></a>
                         </div>
                         <!-- Main-menu -->
                         <div class="main-menu d-none d-lg-block">
