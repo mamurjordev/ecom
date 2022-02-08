@@ -33,7 +33,7 @@
                     <div class="menu-wrapper">
                         <!-- Logo -->
                         <div class="logo">
-                            <a href="index.html"><img src="frontend/assets/img/mcart.png" alt=""></a>
+                            <a href=""><img src="frontend/assets/img/mcart.png" alt=""></a>
                         </div>
                         <!-- Main-menu -->
                         <div class="main-menu d-none d-lg-block">
