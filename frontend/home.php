@@ -7,7 +7,7 @@
 <?php require_once "home/top_discount.php" ?>
 <?php require_once "home/latest_product.php" ?>
 <?php require_once "home/sold_out.php" ?>
-<?php require_once "home/popular.php" ?>
+<?php require_once "home/category_product.php" ?>
 <?php require_once "home/info.php" ?>
 
 
