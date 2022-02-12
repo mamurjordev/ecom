@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="frontend/assets/css/slick.css">
     <link rel="stylesheet" href="frontend/assets/css/nice-select.css">
     <link rel="stylesheet" href="frontend/assets/css/style.css">
+    
 </head>
 
 <body>
