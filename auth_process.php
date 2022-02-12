@@ -32,3 +32,32 @@
             }
         }
     }
+
+
+
+    // user login
+
+    if(isset($_POST['login'])){
+        $email = htmlspecialchars($_POST['email']);
+        $password = htmlspecialchars($_POST['password']);
+
+                
+        $check_sql = "SELECT * FROM users WHERE email='$email' AND password='$password' limit 1";
+        $check_result = $connection->query($check_sql);
+        foreach($check_result as $user){}
+
+        if(isset($user)){
+           $_SESSION['user_id'] = $user['user_id'];
+           $_SESSION['role'] = $user['role'];
+        
+        //    message
+        $_SESSION['msg'] =  "Logged in successfully";
+        header('location: index.php');
+
+        }else{
+            $_SESSION['msg'] =  "Your email & password doesn't match";
+            header('location: login.php');
+        }
+        
+
+    }

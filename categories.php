@@ -1,4 +1,6 @@
 <?php require_once "frontend/partials/header.php" ?>
+<?php require_once "user_auth.php" ?>
+
 <?php require_once "config.php" ?>
 <?php 
 

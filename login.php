@@ -31,7 +31,7 @@
                             <div class="login_part_form_iner">
                                 <h3>Welcome Back ! <br>
                                     Please Sign in now</h3>
-                                <form class="row contact_form" action="#" method="post" novalidate="novalidate">
+                                <form class="row contact_form" action="auth_process.php" method="post" novalidate="novalidate">
                                     <div class="col-md-12 form-group p_star">
                                         <input type="email" class="form-control" id="name" name="email" value=""
                                             placeholder="Email">
