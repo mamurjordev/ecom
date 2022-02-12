@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!doctype html>
 <html class="no-js" lang="zxx">
 <head>
@@ -21,7 +22,9 @@
     <link rel="stylesheet" href="frontend/assets/css/slick.css">
     <link rel="stylesheet" href="frontend/assets/css/nice-select.css">
     <link rel="stylesheet" href="frontend/assets/css/style.css">
-    
+
+    <!-- toaster notification -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css">
 </head>
 
 <body>

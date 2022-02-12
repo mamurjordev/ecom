@@ -128,6 +128,18 @@
     <!-- Jquery Plugins, main Jquery -->	
     <script src="frontend/assets/js/plugins.js"></script>
     <script src="frontend/assets/js/main.js"></script>
-    
+
+    <!-- toaster notification -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+    <?php if(isset( $_SESSION['msg'])): ?>
+
+    <script>
+        toastr.info('<?php echo $_SESSION['msg']; ?>')
+    </script>
+    <?php 
+    // unset msg session 
+    unset($_SESSION['msg']);
+    endif ?>
 </body>
 </html>
