@@ -52,7 +52,14 @@
         
         //    message
         $_SESSION['msg'] =  "Logged in successfully";
-        header('location: index.php');
+
+        if(isset($_SESSION['redirect_url'])){
+            $redirect_url = $_SESSION['redirect_url'];
+            unset($_SESSION['redirect_url']);
+            header("location: $redirect_url");
+        }else{
+            header('location: index.php');
+        }
 
         }else{
             $_SESSION['msg'] =  "Your email & password doesn't match";

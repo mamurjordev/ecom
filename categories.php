@@ -1,8 +1,9 @@
-<?php require_once "frontend/partials/header.php" ?>
-<?php require_once "user_auth.php" ?>
-
-<?php require_once "config.php" ?>
 <?php 
+ob_start();
+require_once "frontend/partials/header.php"; 
+require_once "user_auth.php"; 
+require_once "config.php"; 
+
 
     // query for product
     $sql = "SELECT * FROM product_categories";
