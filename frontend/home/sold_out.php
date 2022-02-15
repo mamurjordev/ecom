@@ -24,9 +24,13 @@
                         <div class="single-popular-items mb-50 text-center">
                             <div class="popular-img">
                                 <img src="admin/products/func/<?php echo $product['feature_image'] ?>" alt="">
+                                <!-- add to cart -->
+                               <a href="cart_process.php?product_id=<?php echo $product['product_id'] ?>">
                                 <div class="img-cap">
                                     <span>Add to cart</span>
                                 </div>
+                                </a>
+                                <!-- /add to cart -->
                                 <div class="favorit-items">
                                     <span class="flaticon-heart"></span>
                                 </div>
