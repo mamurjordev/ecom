@@ -19,7 +19,11 @@ if(isset($_REQUEST['product_id'])){
         header("location: $url");
 
     }else{
-        echo "fails";
+        $_SESSION['msg'] = "Fails to add you product on cart !";
+
+        // redirect to previous url
+        $url = $_SERVER['HTTP_REFERER'];
+        header("location: $url");
     }
     
 }
