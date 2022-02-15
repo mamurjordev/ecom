@@ -54,9 +54,18 @@
                             </div>
                             <p>$5</p>
                         </div>
+                    
+                    <!-- add to cart -->
                     <div class="add_to_cart">
-                        <a href="#" class="btn_3">add to cart</a>
+                    <a href="cart_process.php?product_id=<?php echo $product['product_id'] ?>" class="btn_3">
+                            <span>Add to cart</span>
+                    </a>
                     </div>
+
+                    <!-- /add to cart -->
+
+                    </div>
+
                     </div>
                 </div>
                 </div>
