@@ -1,11 +1,13 @@
 <?php session_start();?>
 <?php require_once "config.php" ?>
 <?php 
+if(isset($_SESSION['user_id'])){
     $user_id = $_SESSION['user_id'];
     $countCartSql = "SELECT count(cart_id) as countProduct FROM carts WHERE user_id ='$user_id'";
     $cartCountQuery = $connection->query($countCartSql);
     
-    foreach ($cartCountQuery as $countCartProducts)
+    foreach ($cartCountQuery as $countCartProducts);
+}
 
 ?>
 <!doctype html>
@@ -70,11 +72,13 @@
                                     </div>
                                 </li>
                                 <?php if(isset($_SESSION['user_id'])): ?>
-                                <li> <a href="account"><span class="flaticon-user"></span></a></li>
+                                <li> <a href="account.php"><span class="flaticon-user"></span></a></li>
                                 <?php else: ?>
                                 <li> <a href="login.php"><span class="flaticon-user"></span></a></li>
                                 <?php endif ?>
-                                <li><a href="cart.php"><span class="flaticon-shopping-cart"><span class="text-danger"><?php echo $countCartProducts['countProduct'] ?></span></span> </a> </li>
+                                <li><a href="cart.php"><span class="flaticon-shopping-cart"><span class="text-danger">
+                                    <?php if(isset($_SESSION['user_id'])) echo $countCartProducts['countProduct']; ?>
+                                </span></span> </a> </li>
                             </ul>
                         </div>
                     </div>
