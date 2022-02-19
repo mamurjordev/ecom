@@ -1,6 +1,7 @@
+
 <?php require_once "frontend/partials/header.php" ?>
 <?php require_once 'user_auth.php' ?>
-<?php require_once "config.php" ?>
+
 <?php 
     $user_id = $_SESSION['user_id'];
     $sql = "SELECT * FROM carts
