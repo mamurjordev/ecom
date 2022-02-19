@@ -37,17 +37,17 @@
                       </div>
                     </td>
                     <td>
-                      <h5><?php echo $product['price'];?> BDT</h5>
+                      <h5><?php echo $product['buy_price'];?> BDT</h5>
                     </td>
                     <td>
                       <div class="product_count">
                         <span class="input-number-decrement"> <i class="ti-minus"></i></span>
-                        <input class="input-number" type="text" value="1" min="0" max="10">
+                        <input class="input-number" type="text" value="<?php echo $product['qty']; ?>" min="0" max="10">
                         <span class="input-number-increment"> <i class="ti-plus"></i></span>
                       </div>
                     </td>
                     <td>
-                      <h5>$720.00</h5>
+                      <h5><?php echo $product['buy_price']* $product['qty'] ?> BDT</h5>
                     </td>
                   </tr>
                   <?php endforeach ?>

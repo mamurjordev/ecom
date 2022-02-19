@@ -16,9 +16,9 @@ if(isset($_REQUEST['product_id'])){
 
     // check discount have or not
     if($productData['discount_price']!=null){
-        $product_price = $productData['price'];
-    }else{
         $product_price = $productData['discount_price'];
+    }else{
+        $product_price = $productData['price'];
     }
 
     $sql = "INSERT INTO carts(user_id,product_id,buy_price, qty) VALUES( '$user_id', '$product_id', '$product_price','$qty')";
