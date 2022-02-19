@@ -22,6 +22,7 @@
                     <th scope="col">Price</th>
                     <th scope="col">Quantity</th>
                     <th scope="col">Total</th>
+                    <th scope="col">Remove</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -49,6 +50,11 @@
                     </td>
                     <td>
                       <h5><?php echo $product['buy_price']* $product['qty'] ?> BDT</h5>
+                    </td>
+                    <td>
+                     <a href="cart_process.php?cart_remove=<?php echo $product['cart_id'] ?>">
+                        <button class="btn btn-danger"><img src="https://img.icons8.com/material-rounded/24/000000/filled-trash.png"/></button>
+                     </a>
                     </td>
                   </tr>
                   <?php endforeach ?>

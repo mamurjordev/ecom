@@ -1,12 +1,14 @@
 <?php 
 require "config.php";
 session_start();
+require('user_auth.php'); // to check user auth
+
+$user_id = $_SESSION['user_id'];
+
 if(isset($_REQUEST['product_id'])){
-    require('user_auth.php'); // to check user auth
 
     // cart info
     $product_id = $_REQUEST['product_id'];
-    $user_id = $_SESSION['user_id'];
     $qty = 1;
 
     // get product
@@ -39,4 +41,44 @@ if(isset($_REQUEST['product_id'])){
         header("location: $url");
     }
     
+}
+
+
+// remove from cart
+if(isset($_REQUEST['cart_remove'])){
+    $cart_id = $_REQUEST['cart_remove'];
+    $checkUserSql = "SELECT user_id FROM carts where cart_id = '$cart_id'";
+    $cartData = $connection->query($checkUserSql);
+
+    foreach ($cartData as $cart)
+    
+    if($cart['user_id']==$user_id){
+        
+        $cartRemoveSql = "DELETE FROM carts WHERE cart_id = '$cart_id'";
+        $removeResult = $connection->query($cartRemoveSql);
+
+        if($removeResult){
+            $_SESSION['msg'] = "Product removed from cart !";
+
+            // redirect to previous url
+            $url = 'cart.php';
+            header("location: $url");
+        }else{
+            // if fails to query execution
+            $_SESSION['msg'] = "Fails to remove product form cart !";
+
+            // redirect to previous url
+            $url = 'cart.php';
+            header("location: $url");
+        }
+
+        exit();
+    }
+
+    // if cart id & user id don't match
+    $_SESSION['msg'] = "Fails to remove product form cart !";
+
+    // redirect to previous url
+    $url = 'cart.php';
+    header("location: $url");
 }
