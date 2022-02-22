@@ -11,6 +11,7 @@
 
 ?>
 <main>
+<form action="checkout.php" method="post">
 <section class="cart_area pt-5">
         <div class="container">
           <div class="cart_inner">
@@ -27,6 +28,8 @@
                 </thead>
                 <tbody>
                 <?php foreach ($products as $product): ?>
+                  <!-- this input is only for send data to checkout page -->
+                  <input type="hidden" name="cart_id[]" value="<?php echo $product['cart_id']; ?>"> 
                   <tr>
                     <td>
                       <div class="media">
@@ -61,12 +64,13 @@
                 </tbody>
               </table>
               <div class="checkout_btn_inner float-right">
-                <a class="btn_1" href="#">Continue Shopping</a>
-                <a class="btn_1 checkout_btn_1" href="#">Proceed to checkout</a>
+                <a class="btn_1" href="products.php">Continue Shopping</a>
+                <input type="submit" value="Proceed to checkout" class="btn_1 checkout_btn_1" name="checkout">
               </div>
             </div>
           </div>
       </section>
       <!--================End Cart Area =================-->
+</form>
 </main>    
 <?php require_once 'frontend/partials/footer.php'; ?>
